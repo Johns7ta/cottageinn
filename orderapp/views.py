@@ -15,7 +15,7 @@ import simplejson
 from django.contrib.auth.models import User
 
 
-def vibebase(request,template_name="vibebase.html"):
+def orderbase(request,template_name="orderbase.html"):
     context = {}
     context['MyCategories'] = ItemCategory.objects.all()
 
