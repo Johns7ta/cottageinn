@@ -1,0 +1,56 @@
+{% load staticfiles %}
+{% load humanize %}
+<!DOCTYPE html>
+{% block html-def %}
+<html lang="en">
+{% endblock html-def %}
+
+    <head>
+        <title>Cottage Inn</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1.0"/>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1" media="(device-height: 568px)"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="orange" />
+    </head>
+
+    <body>
+        <div data-role="page" id="main">
+
+            <div data-role="header" data-theme="a" style="width: 100%;">
+                {% block header %}
+                <h1 style="white-space: normal;">Cottage Inn</h1>
+                <a href="#left-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+                {% endblock %}
+            </div><!--header-->
+
+
+
+            <div data-role="panel" id="left-panel" data-theme="a">
+
+                <ul data-role="listview" data-theme="a">
+                    {% if user.is_authenticated %}
+                    <li data-icon="back"><a onclick="history.go(-1)" data-ajax="false">Back</a></li>
+                    <li data-icon="arrow-r"><a href="{% url 'categories' %}" data-ajax="false">All Items</a></li>
+                    {% for category in MyCategories %}
+                        <li data-icon="arrow-r"><a href="{% url 'items' %}?catid={{category.id}}" data-ajax="false">{{ category.name }}</a></li>
+                    {% endfor %}
+                    <li data-icon="check"><a href="{% url 'shopcart' %}" id="sideShop" data-ajax="false">Shopping Cart</a></li>
+                    {% else %}
+                    <li>Please Login to View Menu</li>
+                    {% endif %}
+                 </ul>
+            </div><!--panel-->
+
+            <div data-role="content">
+                {% block body %}
+
+                {% endblock %}
+            </div><!--content-->
+
+        </div><!--page-->
+    </body>
+</html>
