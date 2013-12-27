@@ -1,0 +1,20 @@
+{% extends 'orderbase.html' %}
+
+        {% block body %}
+
+            <h2 style="text-align:center;">Store #1211</h2>
+            <p id="address" style="text-align:center;">1639 East Broomfield</p>
+            <p id="city" style="text-align:center;">Mt Pleasant, MI 48858</p>
+
+            <br>
+
+            <p style="text-align:center;"><b>Delivery & Carryout Hours:</b></p>
+            <p style="text-align:center;">Su 12:00pm-11:00pm</p>
+            <p style="text-align:center;">Mo-Th 11:00am-11:00pm</p>
+            <p style="text-align:center;">Fr-Sa 11:00am-1:00am</p>
+
+            <br>
+
+            <p><a href="{% url 'coorder' %}" data-role="button" data-theme="a" data-inline="true" data-shadow="false" data-ajax="false" style="width: 100%; text-align: center;">Carryout</a></p>
+
+        {% endblock %}

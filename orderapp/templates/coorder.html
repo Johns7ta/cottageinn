@@ -1,0 +1,17 @@
+{% extends 'orderbase.html' %}
+
+        {% block body %}
+
+            <p><a href="{% url 'menu' %}" data-role="button" data-theme="a" data-inline="true" data-shadow="false" data-ajax="false" style="width: 100%; text-align: center;">Menu</a>
+            <a href="{% url 'coupons' %}" data-role="button" data-theme="a" data-inline="true" data-shadow="false" data-ajax="false" style="width: 100%; text-align: center;">Coupons</a></p>
+
+            <br>
+
+            <ul data-role="listview">
+                <li><a href="#location" id="location" class="chooseLocation">
+                <h2 style="white-space:normal;">Mt Pleasant, MI 48858</h2>
+                <p id="address">1639 East Broomfield</p>
+                </a></li>
+            </ul>
+
+        {% endblock %}

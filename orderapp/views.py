@@ -78,3 +78,45 @@ def createacct(request, template_name="createacct.html"):
         })
 
     return render(template_name, context, context_instance=RequestContext(request))
+
+def delivery(request,template_name="delivery.html"):
+    context = {}
+    context['MyOrders'] = "Future Fun"
+
+    return render(template_name, context, context_instance=RequestContext(request))
+
+def carryout(request,template_name="carryout.html"):
+    context = {}
+    context['MyOrders'] = "Future Fun"
+
+    return render(template_name, context, context_instance=RequestContext(request))
+
+def delorder(request,template_name="delorder.html"):
+    context = {}
+    context['MyOrders'] = "Future Fun"
+
+    return render(template_name, context, context_instance=RequestContext(request))
+
+def colocation(request,template_name="colocation.html"):
+    context = {}
+    context['MyOrders'] = "Future Fun"
+
+    return render(template_name, context, context_instance=RequestContext(request))
+
+def coorder(request,template_name="coorder.html"):
+    context = {}
+    context['MyOrders'] = "Future Fun"
+
+    return render(template_name, context, context_instance=RequestContext(request))
+
+def menu(request,template_name="menu.html"):
+    context = {}
+    context['MyOrders'] = "Future Fun"
+
+    return render(template_name, context, context_instance=RequestContext(request))
+
+def coupons(request,template_name="coupons.html"):
+    context = {}
+    context['MyOrders'] = "Future Fun"
+
+    return render(template_name, context, context_instance=RequestContext(request))

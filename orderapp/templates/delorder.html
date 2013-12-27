@@ -1,0 +1,21 @@
+{% extends 'orderbase.html' %}
+
+        {% block body %}
+
+            <form>
+
+                <label for="street"><b>Street</b></label>
+                <input type="text" data-clear-btn="true" id="street" value="" required="true" placeholder="required">
+                <label for="apt"><b>Suite/Apt #</b></label>
+                <input type="text" data-clear-btn="true" id="apt" value="">
+                <label for="city"><b>City</b></label>
+                <input type="text" data-clear-btn="true" id="city" value="" placeholder="required">
+                <label for="state"><b>State</b></label>
+                <input type="text" data-clear-btn="true" id="state" value="" placeholder="required">
+                <label for="zip"><b>Zip</b></label>
+                <input type="text" data-clear-btn="true" id="zip" value="" placeholder="required">
+
+            </form>
+
+
+        {% endblock %}
