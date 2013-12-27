@@ -20,22 +20,18 @@
     <body>
         <div data-role="page" id="main">
 
-            <div data-role="header" data-theme="a" style="width: 100%;">
+            <div data-role="header" data-theme="a">
                 {% block header %}
-                <h1 style="white-space: normal;">Cottage Inn</h1>
+                <h1> Cottage Inn </h1>
                 <a href="#left-panel" data-icon="bars" data-iconpos="notext">Menu</a>
                 {% endblock %}
             </div><!--header-->
 
-
-
             <div data-role="panel" id="left-panel" data-theme="a">
 
                 <ul data-role="listview" data-theme="a">
-                    <li data-icon="back"><a onclick="history.go(-1)" data-ajax="false">Back</a></li>
-                    <li data-icon="arrow-r"><a href="" data-ajax="false">All Items</a></li>
-                        <li data-icon="arrow-r"><a href="" data-ajax="false">The End Is Near</a></li>
-                    <li data-icon="check"><a href="" id="sideShop" data-ajax="false">Shopping Cart</a></li>
+                    <li data-icon="arrow-r"><a href="" data-ajax="false">Requested Orders</a></li>
+                    <li data-icon="arrow-r"><a href="" data-ajax="false">Customer Lookup</a></li>
                     <li>Please Login to View Menu</li>
                  </ul>
             </div><!--panel-->
@@ -45,6 +41,7 @@
 
                 {% endblock %}
             </div><!--content-->
+
 
         </div><!--page-->
     </body>

@@ -8,6 +8,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
 
     url(r'^orderbase/', 'orderapp.views.orderbase', name='orderbase'),
+    url(r'^empbase/', 'empapp.views.empbase', name='empbase'),
 
     url(r'^admin/', include(admin.site.urls)),
 
