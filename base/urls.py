@@ -14,10 +14,12 @@ urlpatterns = patterns('',
     url(r'^delivery/', 'orderapp.views.delivery', name='delivery'),
     url(r'^carryout/', 'orderapp.views.carryout', name='carryout'),
     url(r'^delorder/', 'orderapp.views.delorder', name='delorder'),
+    url(r'^delinfo/', 'orderapp.views.delinfo', name='delinfo'),
     url(r'^colocation/', 'orderapp.views.colocation', name='colocation'),
     url(r'^coorder/', 'orderapp.views.coorder', name='coorder'),
     url(r'^menu/', 'orderapp.views.menu', name='menu'),
     url(r'^coupons/', 'orderapp.views.coupons', name='coupons'),
+    url(r'^pizza/', 'orderapp.views.pizza', name='pizza'),
 
     url(r'^admin/', include(admin.site.urls)),
 

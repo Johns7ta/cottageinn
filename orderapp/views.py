@@ -97,6 +97,12 @@ def delorder(request,template_name="delorder.html"):
 
     return render(template_name, context, context_instance=RequestContext(request))
 
+def delinfo(request,template_name="delinfo.html"):
+    context = {}
+    context['MyOrders'] = "Future Fun"
+
+    return render(template_name, context, context_instance=RequestContext(request))
+
 def colocation(request,template_name="colocation.html"):
     context = {}
     context['MyOrders'] = "Future Fun"
@@ -110,6 +116,12 @@ def coorder(request,template_name="coorder.html"):
     return render(template_name, context, context_instance=RequestContext(request))
 
 def menu(request,template_name="menu.html"):
+    context = {}
+    context['MyOrders'] = "Future Fun"
+
+    return render(template_name, context, context_instance=RequestContext(request))
+
+def pizza(request,template_name="pizza.html"):
     context = {}
     context['MyOrders'] = "Future Fun"
 

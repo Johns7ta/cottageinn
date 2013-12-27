@@ -2,20 +2,21 @@
 
         {% block body %}
 
-            <form>
+            <p><a href="{% url 'menu' %}" data-role="button" data-theme="a" data-inline="true" data-shadow="false" data-ajax="false" style="width: 100%; text-align: center;">Menu</a>
+            <a href="{% url 'coupons' %}" data-role="button" data-theme="a" data-inline="true" data-shadow="false" data-ajax="false" style="width: 100%; text-align: center;">Coupons</a></p>
 
-                <label for="street"><b>Street</b></label>
-                <input type="text" data-clear-btn="true" id="street" value="" required="true" placeholder="required">
-                <label for="apt"><b>Suite/Apt #</b></label>
-                <input type="text" data-clear-btn="true" id="apt" value="">
-                <label for="city"><b>City</b></label>
-                <input type="text" data-clear-btn="true" id="city" value="" placeholder="required">
-                <label for="state"><b>State</b></label>
-                <input type="text" data-clear-btn="true" id="state" value="" placeholder="required">
-                <label for="zip"><b>Zip</b></label>
-                <input type="text" data-clear-btn="true" id="zip" value="" placeholder="required">
+            <br>
 
-            </form>
+            <ul data-role="listview">
+                <li><a href="#location" id="location" class="chooseLocation">
+                <h2 style="white-space:normal;">Delivery to:</h2>
+                <p id="city">Mt Pleasant, MI 48858</p>
+                <p id="address">1639 East Broomfield</p>
+                </a></li>
+            </ul>
 
+            <br>
+
+            <p><a href="#" data-role="button" data-theme="a" data-inline="true" data-shadow="false" data-ajax="false" style="width: 100%; text-align: center;">Checkout</a></p>
 
         {% endblock %}
