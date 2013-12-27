@@ -1,0 +1,16 @@
+{% extends 'orderbase.html' %}
+
+        {% block body %}
+
+            <form name="createacct" action="{% url 'createacct' %}" method="POST">
+                {% csrf_token %}
+                {{ form }}
+
+                <input type="submit" value="Create Account" data-theme="a" data-role="button" data-ajax="false">
+
+                <p><a href="{% url 'custlogin' %}" data-role="button" data-theme="c" data-inline="true" data-shadow="false" data-ajax="false" style="width: 100%; text-align: center;">Cancel</a></p>
+
+            </form>
+
+
+        {% endblock %}

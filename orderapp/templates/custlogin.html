@@ -1,0 +1,23 @@
+{% extends 'orderbase.html' %}
+
+        {% block body %}
+
+            <form name="custlogin" action="{% url 'custlogin' %}" method="POST">
+                {% csrf_token %}
+                {{ form }}
+
+                <input type="submit" class="login" value="Login" data-theme="a" data-role="button" data-ajax="false">
+
+                <p><b>Don't have a Cottage Inn account yet? Click the button below to create one!</b></p>
+
+                <p><a href="{% url 'createacct' %}" data-role="button" data-theme="a" data-inline="true" data-shadow="false" style="width:100%; text-align:center;">Create Account</a></p>
+
+
+            </form>
+
+            <script>
+
+
+            </script>
+
+        {% endblock %}
