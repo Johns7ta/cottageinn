@@ -7,7 +7,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
 
-    url(r'^custlogin/', 'orderapp.views.custlogin', name='custlogin'),
+    url(r'^orderbase/', 'orderapp.views.orderbase', name='orderbase'),
 
     url(r'^admin/', include(admin.site.urls)),
 
