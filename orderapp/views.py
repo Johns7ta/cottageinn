@@ -132,3 +132,9 @@ def coupons(request,template_name="coupons.html"):
     context['MyOrders'] = "Future Fun"
 
     return render(template_name, context, context_instance=RequestContext(request))
+
+def shopcart(request,template_name="shopcart.html"):
+    context = {}
+    context['MyOrders'] = "Future Fun"
+
+    return render(template_name, context, context_instance=RequestContext(request))

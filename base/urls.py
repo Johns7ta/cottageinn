@@ -20,6 +20,7 @@ urlpatterns = patterns('',
     url(r'^menu/', 'orderapp.views.menu', name='menu'),
     url(r'^coupons/', 'orderapp.views.coupons', name='coupons'),
     url(r'^pizza/', 'orderapp.views.pizza', name='pizza'),
+    url(r'^shopcart/', 'orderapp.views.shopcart', name='shopcart'),
 
     url(r'^admin/', include(admin.site.urls)),
 
